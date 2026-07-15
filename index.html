@@ -180,9 +180,19 @@
     @media (max-width: 820px) {
       nav { padding: 0.9rem 1.4rem; }
       .hero { padding: 7rem 1.2rem 3rem; }
-      .phones { gap: 0.6rem; }
-      .phone-center { width: 180px; }
-      .phone-left, .phone-right { width: 150px; }
+      /* swipeable carousel: all three screens, snap, neighbor peeks */
+      .phones {
+        gap: 14px; width: 100%; justify-content: flex-start; perspective: none;
+        overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 16px;
+        padding: 12px 16px 18px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+      }
+      .phones::-webkit-scrollbar { display: none; }
+      .phone-center, .phone-left, .phone-right {
+        flex: 0 0 74%; max-width: 250px; width: auto;
+        transform: none; opacity: 1; scroll-snap-align: start;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+      .phone-center { order: -1; }  /* Nutrition first */
       .spotlight-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
       .spotlight p { margin: 0 auto; }
       .spotlight .eyebrow { margin-inline: auto; }
@@ -190,8 +200,7 @@
       .features { grid-template-columns: repeat(2, 1fr); margin-top: 4.5rem; }
     }
     @media (max-width: 460px) {
-      .phone-left, .phone-right { display: none; }
-      .phone-center { width: 230px; }
+      .phone-center, .phone-left, .phone-right { flex-basis: 80%; }
       .features { grid-template-columns: 1fr; }
     }
   </style>
