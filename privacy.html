@@ -119,7 +119,7 @@
 
   <main class="legal-container">
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective Date: April 5, 2026 &middot; Last Updated: May 28, 2026</p>
+    <p class="effective-date">Effective Date: April 5, 2026 &middot; Last Updated: October 13, 2026</p>
 
     <p>Kardia Labs LLC ("Kardia Labs," "we," "us," or "our") operates the Temple mobile application (the "App") and the website templeai.app (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App and Site (collectively, the "Service"). By using the Service, you consent to the practices described in this Privacy Policy.</p>
     <p>If you do not agree with the terms of this Privacy Policy, please do not access or use the Service.</p>
@@ -225,12 +225,29 @@
     </ul>
     <p>You can revoke Temple's HealthKit access at any time in iOS Settings → Privacy &amp; Security → Health → Temple. Revoking access will disable HealthKit-based features such as Apple Watch workout import, step count display, and writing your Temple workouts back to Health.</p>
 
+    <h3>1.10 Faith Practice Data</h3>
+    <p>Temple includes an optional faith layer: daily Scripture reading, a prayer timer, a prayer list, and daily encouragement. You can turn it on or off at any time in Settings. When it is on, we collect:</p>
+    <ul>
+      <li><strong>Faith preferences:</strong> whether faith features are on or off (and when you switched), your preferred prayer time of day and reminder time, how much Scripture you want to read each day, and the reading themes or plan you chose</li>
+      <li><strong>Practice history:</strong> which days you read, prayed, or completed an encouragement, the passage reference you read, and how long the prayer timer ran</li>
+      <li><strong>Prayer list:</strong> the names and requests you type into your prayer list, and whether you marked them answered</li>
+    </ul>
+    <p>Because this information can reveal religious beliefs, we treat it as sensitive and limit how it is used:</p>
+    <ul>
+      <li>Faith practice data is <strong>never sent to our AI provider</strong>. Samson, the AI coach, does not receive your faith preferences, practice history, or prayer list, and does not use them to shape its responses.</li>
+      <li>Scripture text and reading plans are bundled inside the App. Reading Scripture does not send a request to our servers.</li>
+      <li>Prayer reminders are local notifications scheduled on your device. Your prayer time is stored with your account only so it can be restored on a new device.</li>
+      <li>Faith practice data is <strong>never used for advertising</strong> and <strong>never sold or shared with third parties</strong>, other than being stored with our database provider (Supabase) under the protections described in Section 4.</li>
+      <li>You can delete individual prayer list entries at any time in the App. Turning faith features off stops new collection; deleting your account deletes all faith practice data.</li>
+    </ul>
+
     <h2>2. How We Use Your Information</h2>
     <p>We use the information we collect to:</p>
     <ul>
       <li><strong>Provide core functionality:</strong> track workouts, log nutrition, record activities, and display your fitness history and progress</li>
       <li><strong>Power AI features:</strong> generate personalized workout programs, provide nutrition analysis, calculate training recommendations, and deliver AI coaching through Samson</li>
       <li><strong>Personalize your experience:</strong> tailor workout suggestions based on your training history, goals, available equipment, and performance data</li>
+      <li><strong>Provide faith features (when turned on):</strong> show your daily reading, keep your reading and prayer streaks, schedule your prayer reminder, and keep your prayer list in sync across your devices</li>
       <li><strong>Process subscriptions:</strong> manage your subscription status, entitlements, and access to premium features</li>
       <li><strong>Improve the Service:</strong> analyze usage patterns to fix bugs, improve performance, and develop new features</li>
       <li><strong>Communicate with you:</strong> send service-related notices, security alerts, and support messages</li>
@@ -316,6 +333,7 @@
       <li><strong>Workout and fitness data:</strong> retained until you delete your account or individually delete specific records</li>
       <li><strong>AI conversation history:</strong> retained for up to 90 days to provide conversation continuity, then automatically purged</li>
       <li><strong>Activity GPS data:</strong> retained until you delete the specific activity or your account</li>
+      <li><strong>Faith practice data and prayer list:</strong> retained until you delete the specific entry or your account</li>
       <li><strong>Usage and analytics data:</strong> retained in anonymized/aggregated form for up to 24 months</li>
     </ul>
     <p>After account deletion, we may retain certain data in anonymized or aggregated form for analytical purposes. Backup copies may persist for up to 30 days after deletion before being fully purged.</p>
@@ -337,7 +355,7 @@
     <p>Upon receiving a verified deletion request, we will delete your personal data within 30 days, except where we are legally required to retain certain information.</p>
 
     <h3>6.4 Opt-Out of AI Data Use</h3>
-    <p>You may use the App without interacting with AI features. If you choose to use Samson, your conversation data is processed to generate responses but is not used to train or fine-tune AI models. Your data is sent to our AI provider (OpenAI) solely for generating real-time responses and is subject to OpenAI's data processing terms, which do not use API inputs for model training without explicit opt-in.</p>
+    <p>You may use the App without interacting with AI features. If you choose to use Samson, your conversation data is processed to generate responses but is not used to train or fine-tune AI models. Your data is sent to our AI provider (OpenAI) solely for generating real-time responses and is subject to OpenAI's data processing terms, which do not use API inputs for model training without explicit opt-in. Faith practice data (Section 1.10) is never included in what we send to our AI provider.</p>
 
     <h3>6.5 Push Notifications</h3>
     <p>You can opt out of push notifications through your device settings at any time.</p>
@@ -353,7 +371,7 @@
       <li><strong>Right to Correct:</strong> You may request correction of inaccurate personal information.</li>
       <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA/CPRA rights.</li>
       <li><strong>No Sale or Sharing:</strong> We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising.</li>
-      <li><strong>Sensitive Personal Information:</strong> Health and fitness data, precise geolocation, and account credentials are considered sensitive personal information under CPRA. We use this data only as necessary to provide the Service and do not use it for purposes beyond what is disclosed in this policy.</li>
+      <li><strong>Sensitive Personal Information:</strong> Health and fitness data, precise geolocation, account credentials, and faith practice data (which can reveal religious beliefs) are considered sensitive personal information under CPRA. We use this data only as necessary to provide the Service and do not use it for purposes beyond what is disclosed in this policy.</li>
     </ul>
     <p>To exercise these rights, contact us at the email address below. We will verify your identity before processing your request.</p>
 
@@ -373,6 +391,10 @@
       <tr>
         <td>Processing health and fitness data</td>
         <td>Explicit consent</td>
+      </tr>
+      <tr>
+        <td>Processing faith practice data (may reveal religious beliefs)</td>
+        <td>Explicit consent (you turn faith features on; you can turn them off at any time)</td>
       </tr>
       <tr>
         <td>Processing payment/subscription data</td>
